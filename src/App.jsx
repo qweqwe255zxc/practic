@@ -1,13 +1,17 @@
 import './App.css'
-import Form from './assets/components/form.jsx';
+import Form from './assets/components/Form/Form.jsx';
+import Table from './assets/components/Table/Table.jsx'
+import { useState } from 'react';
 
 const App = () => {
 
+  const [data, setData] = useState([]);
 
   return (
-    <div>
-      <Form />
-    </div>
+    <>
+      <Form setData={setData} />
+      <Table data={data} />
+    </>
   );
 };
 
